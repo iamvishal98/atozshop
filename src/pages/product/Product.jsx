@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setParticularOne } from '../../redux/slicers/ProductSlice';
-import { add_to_cart } from '../../redux/slicers/cartSlice';
+import { add_to_cart } from '../../redux/slicers/CartSlice';
 import {notify_success} from '../../utils/notifications';  
 
 import {FcShipped} from 'react-icons/fc';
