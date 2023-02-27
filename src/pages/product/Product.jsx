@@ -26,11 +26,11 @@ const Product = () => {
     notify_success('Added to cart!');
    };
 
-   useEffect(() => {
-      if(dispatch && setParticularOne) dispatch(setParticularOne({
-        id:productID
-      }))
-    },[dispatch, setParticularOne]);
+  //  useEffect(() => {
+  //     if(dispatch && setParticularOne) dispatch(setParticularOne({
+  //       id:productID
+  //     }))
+  //   },[dispatch, setParticularOne]);
 
   return (
     <div className='product_container'>

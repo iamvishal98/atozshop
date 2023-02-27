@@ -1,12 +1,16 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import {Link} from 'react-router-dom';
+import { setParticularOne } from '../../redux/slicers/ProductSlice';
 import './card.scss';
 
 
 const Card = ({item}) => {
+  const dispatch = useDispatch();
 
   return (
-    <Link to ={`/product/${item.subCategory}/${item.id}`} className='link'>
+    <Link  to ={`/product/${item.subCategory}/${item.id}`} className='link'
+    onClick={() => dispatch(setParticularOne({id:item.id}))}>
     <div className='card_container'>
       <div className="image_container">
         {item.isNew && <span>New season</span>}
