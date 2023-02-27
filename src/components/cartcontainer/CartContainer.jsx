@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import {AiFillPlusCircle ,AiFillMinusCircle,AiFillDelete} from 'react-icons/ai';
 
-import { remove_from_cart,incrementQuantity,decrementQuantity } from '../../redux/slicers/cartSlice';
+import { remove_from_cart,incrementQuantity,decrementQuantity } from '../../redux/slicers/CartSlice';
 import { notify_success } from '../../utils/notifications';
 
 
