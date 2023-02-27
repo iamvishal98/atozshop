@@ -27,11 +27,10 @@ const Product = () => {
    };
 
    useEffect(() => {
-      dispatch(setParticularOne({
+      if(dispatch && setParticularOne) dispatch(setParticularOne({
         id:productID
       }))
-    },[]
-   );
+    },[dispatch, setParticularOne]);
 
   return (
     <div className='product_container'>
