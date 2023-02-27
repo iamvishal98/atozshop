@@ -1,0 +1,188 @@
+@import '../../style/globalStyles.scss';
+
+.navbar {
+
+    height: 6rem;
+    background-color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    box-shadow: 5px 20px 18px lightgray;
+
+    .wrapper {
+        padding: 1rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+
+        .left {
+            width: 12rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                background-color: #2879fe;
+                cursor: pointer;
+            }
+
+        }
+
+        .middle {
+            width: 45%;
+            height: 3rem;
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 3rem;
+                position: relative;
+                input {
+                    width: 90%;
+                    height: 100%;
+                    border: 1px solid lightgray;
+                    border-radius: 5px;
+                    padding: 0.5rem;
+                }
+
+                button {
+                    height: 100%;
+                    width: 15%;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    border: none;
+                    border-radius: 0 5px 5px 0;
+                    position: absolute;
+                    right: 0px;
+                    cursor: pointer;
+                    background-color: #4c4c4c;
+                    color: white;
+
+                    &:hover {
+                        background-color: #e4e4e4;
+                        color: #313131;
+                        transition: all 0.5s ease;
+                    }
+                
+                }
+            }
+
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            width: 7rem;
+
+            .icon-item{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+                position: relative;
+
+                .search_icon {
+                    display: none;
+                }
+
+                .icon {
+                    font-size: 20px;
+                    cursor:pointer
+                }
+
+                .bubble {
+                    font-size: 1.2rem;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    background-color: #2879fe;
+                    color: white;
+                    position: absolute;
+                    top: -10px;
+                    right: -17px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+        
+                }
+
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:$m-size) {
+    .navbar {
+        
+        .wrapper {
+            padding: 1rem 2rem;
+            position: relative;
+
+            .left {
+                width: 10rem;
+
+            }
+
+            .right {
+                width: 10rem;
+                margin-right: 1rem;
+                .icon-item {
+                    .search_icon {
+                        display: flex;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .middle {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                z-index: -5;
+                top: -1rem;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+               
+                transition:  0.5s ease-in;
+
+            }
+            .middle.active {
+                top: 6rem;
+                display: block;
+                z-index: 5;
+                width: 100%;
+                height: auto;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                padding: 1rem 0;
+                background-color: #f8f8f8;
+                box-shadow: 5px 20px 18px lightgray;
+               
+            }
+        }
+    }
+
+    
+}
+
+
+@media screen and (max-width:$s-size) {
+   .navbar {
+    .wrapper {
+        .middle {
+            form{
+                button  {
+                    font-size: 0.8rem;
+                    width: 17%;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+   }
+}

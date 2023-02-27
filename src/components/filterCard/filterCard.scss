@@ -1,0 +1,31 @@
+.filter_wrapper {
+    position: sticky;
+    top: 50px;
+    padding: 1rem;
+    background-color: #e4e4e4;
+    width: 250px;
+    max-height: 750px;
+
+    .filter {
+        border-bottom: 1px solid #313131;
+        padding: 10px 1rem;
+    }
+    .items {
+        margin-bottom: 10px;
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin-left: 5px;
+        }
+    }
+
+    h2 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    
+    }
+}

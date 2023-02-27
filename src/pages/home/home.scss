@@ -1,0 +1,24 @@
+.home{
+    .slider {
+        position: relative;
+        overflow: hidden;
+
+        .slider_container {
+            width: 100vw;
+            display: flex;
+            height: calc(100vh - 8rem);
+            transition: all 0.8s ease;
+
+        }
+        
+        .slider_navigation {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 100px;
+            margin: auto;
+            width: fit-content;
+        }
+    }
+
+}

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+$primary: #007bff;
+$primaryDark: #0063cc;
+$primaryLight: #3d9aff;
+$black: #313131;
+$grey: #4c4c4c;
+$lightGrey: #e4e4e4;
+$white: #ffffff;
+$red: #ef4148;
+$green: #5ac12a;
+$golden: #FFD700;
+
+
+$l-size:'1024px';
+$m-size:'768px';
+$s-size:'425px';
+$xs-size:'320px';

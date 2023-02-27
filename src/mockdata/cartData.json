@@ -1,0 +1,21 @@
+[
+    {
+        "id" : 1,
+        "img" : "https://images.unsplash.com/photo-1603205319065-6ffbe8f0e5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "img2":"https://images.unsplash.com/photo-1592301933927-35b597393c0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "title" : "skirt",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": true
+
+    },
+    {
+        "id" : 2,
+        "img" : "https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+        "title" : "hat",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": true
+
+    }
+]

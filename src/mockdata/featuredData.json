@@ -1,0 +1,95 @@
+[
+    {
+        "id" : 1,
+        "img" : "https://images.unsplash.com/photo-1603205319065-6ffbe8f0e5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "img2":"https://images.unsplash.com/photo-1592301933927-35b597393c0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "title" : "skirt",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": true,
+        "gender":"women",
+        "current":"trending"
+
+    },
+    {
+        "id" : 2,
+        "img" : "https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+        "title" : "hat",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": true,
+        "gender":"women",
+        "current":"trending"
+
+    },
+    {
+        "id" : 3,
+        "img" : "https://plus.unsplash.com/premium_photo-1667490646800-665bdeb6e5e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "img2":"https://images.unsplash.com/photo-1596172327838-7938f49840c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "title" : "long sleve shirts",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": true,
+        "gender":"women",
+        "current":"trending"
+
+    },
+    {
+        "id" : 4,
+        "img" : "https://images.unsplash.com/flagged/photo-1551854716-8b811be39e7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "title" : "saree",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": false,
+        "gender":"women",
+        "current":"trending"
+
+    },
+    {
+        "id" : 5,
+        "img" : "https://images.unsplash.com/photo-1603205319065-6ffbe8f0e5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "img2":"https://images.unsplash.com/photo-1592301933927-35b597393c0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "title" : "skirt",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": true,
+        "gender":"women",
+        "current":"featured"
+
+    },
+    {
+        "id" : 6,
+        "img" : "https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+        "title" : "hat",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": true,
+        "gender":"women",
+        "current":"featured"
+
+    },
+    {
+        "id" : 7,
+        "img" : "https://plus.unsplash.com/premium_photo-1667490646800-665bdeb6e5e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "img2":"https://images.unsplash.com/photo-1596172327838-7938f49840c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "title" : "long sleve shirts",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": true,
+        "gender":"women",
+        "current":"featured"
+
+    },
+    {
+        "id" : 8,
+        "img" : "https://images.unsplash.com/flagged/photo-1551854716-8b811be39e7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "title" : "saree",
+        "oldprice":"20",
+        "newprice":"15",
+        "isNew": false,
+        "gender":"women",
+        "current":"featured"
+
+    }
+
+]
