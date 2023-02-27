@@ -31,7 +31,7 @@
         "title":"fossil watch",
         "img1":"https://images.unsplash.com/photo-1610889672442-5629e6845d17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
         "img2":"https://images.unsplash.com/photo-1522125670776-3c7abb882bc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvc3NpbCUyMHdhdGNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-        "price":"1300",
+        "price":1300,
         "isNew":false,
         "brand":"fossil",
         "category":"accessories",

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import { fetchProducts } from "./redux/slicers/ProductSlice";
+import { fetchProducts, setProducts } from "./redux/slicers/ProductSlice";
 
 import Home from './pages/home/Home';
 import Product from './pages/product/Product';
@@ -9,6 +9,7 @@ import Products from "./pages/products/Products";
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Cart from './pages/cart/Cart';
+import data from './data/ecom.json';
 
 import { ToastContainer} from 'react-toastify';
 
@@ -17,7 +18,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    dispatch(setProducts(data));
   },[]);
 
   return (

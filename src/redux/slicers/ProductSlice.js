@@ -13,6 +13,10 @@ export const ProductSlice =  createSlice({
     },
     reducers:{
 
+        setProducts: (state,action) => {
+            state.products=action.payload;
+        },
+
         setParticular: (state,action) => {
 
             state.currentProducts =  
@@ -79,9 +83,11 @@ export const ProductSlice =  createSlice({
 
 });
 
-export const {setParticular,setParticularOne,setFilter,setSearch} = ProductSlice.actions;
+export const {setParticular,setParticularOne,setFilter,setSearch,setProducts} = ProductSlice.actions;
 
 export default ProductSlice.reducer;
+
+// cannot use as this a mock api , while delpoying it's not working
 
 export const fetchProducts= createAsyncThunk('products/fetch',async() => {
     const res = await fetch('https://run.mocky.io/v3/3636c3f6-4b0d-40df-a94c-3521facb9713');
@@ -89,20 +95,3 @@ export const fetchProducts= createAsyncThunk('products/fetch',async() => {
     return data;
 });
 
-//thunks
-
-// export function fetchProducts(){
-//     return async function fetchProductsThunk(dispatch,getState) {
-//         try {
-//             const res = await fetch('https://run.mocky.io/v3/3636c3f6-4b0d-40df-a94c-3521facb9713');
-//             const data = await res.json();
-//             dispatch(setProducts(data))
-
-//         }catch(err) {
-//             console.log(err);
-//         }
-//     }
-
-
-
-// }
