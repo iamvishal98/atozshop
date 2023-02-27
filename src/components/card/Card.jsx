@@ -6,8 +6,7 @@ import './card.scss';
 const Card = ({item}) => {
 
   return (
-    <Link to ={`/product/${item.subCategory}/${item.id}`} 
-    target="_blank"  className='link'>
+    <Link to ={`/product/${item.subCategory}/${item.id}`} className='link'>
     <div className='card_container'>
       <div className="image_container">
         {item.isNew && <span>New season</span>}
