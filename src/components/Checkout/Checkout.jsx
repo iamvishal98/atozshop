@@ -2,7 +2,7 @@ import React from 'react';
 import StripeCheckout from "react-stripe-checkout";
 import {notify_success} from '../../utils/notifications';
 import { useDispatch } from 'react-redux';
-import { empty_cart } from '../../redux/slicers/cartSlice';
+import { empty_cart } from '../../redux/slicers/CartSlice';
 import { useNavigate } from 'react-router-dom';
 
 const Checkout = ({total}) => {
