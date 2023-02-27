@@ -7,7 +7,7 @@ const Card = ({item}) => {
 
   return (
     <Link to ={`/product/${item.subCategory}/${item.id}`} 
-    target="_blank" rel="noopener noreferrer" className='link'>
+    target="_blank"  className='link'>
     <div className='card_container'>
       <div className="image_container">
         {item.isNew && <span>New season</span>}
