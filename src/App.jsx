@@ -13,7 +13,7 @@ import Cart from './pages/cart/Cart';
 
 import { ToastContainer} from 'react-toastify';
 import Signin from "./pages/signInUp/Signin";
-import SignUp from "./pages/signInUp/SignUp";
+import Signup from "./pages/signInUp/Signup";
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/signin" element={<Signin/>} />
-          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/signup" element={<Signup/>} />
           <Route path="/products/:category" element={<Products/>} />
           <Route path="/products/user/:search" element={<Products/>} />
           <Route path="/cart" element={<Cart/>} />

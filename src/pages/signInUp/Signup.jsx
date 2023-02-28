@@ -8,7 +8,7 @@ import { signUp } from '../../redux/slicers/AuthSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 
-const SignUp = () => {
+const Signup = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const dispatch = useDispatch();
@@ -51,4 +51,4 @@ const SignUp = () => {
     );
 }
 
-export default SignUp
+export default Signup
