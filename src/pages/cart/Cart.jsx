@@ -7,17 +7,22 @@ import Checkout from '../../components/Checkout/Checkout';
 
 
 import { useAuth0 } from '@auth0/auth0-react';
+import { signIn } from '../../redux/slicers/AuthSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
   const data = useSelector(state => state.cart.cartItems);
   const {isAuthenticated,loginWithRedirect} = useAuth0();
   const cartLength = data.length;
+  const Navigate = useNavigate();
+  const isUserLoggedIn = useSelector(state => state.authentication.isAuth);
 
   const subTotal = data.reduce((acc,curr) => {
     acc += curr.price*curr.quantity;
     return acc
-  },0)
+  },0);
+
 
   return (
   
@@ -39,8 +44,8 @@ const Cart = () => {
               </div>
               <div className="down">
                 <p>Total:<span>{subTotal+20}</span></p>
-                {isAuthenticated ? <Checkout total={subTotal}/> 
-                : <button onClick={() => loginWithRedirect()}>Sign in to proceed</button>
+                {isUserLoggedIn ? <Checkout total={subTotal}/> 
+                : <button onClick={() => Navigate('/signin')}>Sign in to proceed</button>
                 }
                 <p style={{color:'red',textAlign:'center',marginTop:'5px'}}>Please use card_number : 4242 4242 4242 4242</p>
               </div>

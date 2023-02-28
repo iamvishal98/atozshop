@@ -59,7 +59,7 @@ const Product = () => {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita earum temporibus voluptatem nihil blanditiis deleniti cumque tempora facilis maxime nulla? Reprehenderit consequuntur eveniet quod consequatur sapiente qui, vel necessitatibus exercitationem.
         </p>
         {isItemInCart ?
-          <button disabled>ADDED TO CART</button>
+          <button disabled style={{opacity:'0.5'}}>ADDED TO CART</button>
             :
           <button onClick={()=>handleAdd(data[0])} >ADD TO CART</button>
         }

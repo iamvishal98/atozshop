@@ -21,9 +21,9 @@ const Home = () => {
           component={<FaArrowCircleUp 
             style={{
               position:'absolute',
-              bottom:'12px',
+              bottom:'13px',
               right:'12px',
-              color:'black'
+              color:'purple'
             }}/>} 
           style={{backgroundColor:'#f8f8f8'}}
         />

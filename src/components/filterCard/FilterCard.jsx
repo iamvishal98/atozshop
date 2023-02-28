@@ -10,6 +10,7 @@ const FilterCard = ({uniqueBrandsName}) => {
     const [brands , setBrands] = useState([]);
     const [sort , setSort] =useState('');
     const dispatch = useDispatch();
+  
 
     const handleBrand = (e) => {
         const isChecked = e.target.checked;
@@ -37,27 +38,28 @@ const FilterCard = ({uniqueBrandsName}) => {
         }));
     };
 
+    
 
   return (
     <div className="filter_wrapper">
         <div className="filter">
             <h2>Filter</h2>
         </div>
-        <div className="filter">
+       {uniqueBrandsName.length>1  ?<div className="filter">
             <h2>Product Categories</h2>
             {uniqueBrandsName.map((item,index) =>(
                 <div className="items">
-                <input type='checkbox' 
-                    id={item} 
-                    value={item} 
-                    name='filter' 
-                    key={index}
-                    onChange={(e) => handleBrand(e)}
-                    autoComplete="off"/>
-                <label htmlFor={item}>{item}</label>
-        </div>
+                  <input type='checkbox' 
+                      id={item} 
+                      value={item} 
+                      name='filter' 
+                      key={index}
+                      onChange={(e) => handleBrand(e)}
+                      autoComplete="off"/>
+                  <label htmlFor={item}>{item}</label>
+                </div>
         ))}
-        </div>
+        </div> : null}
         <div className="filter">
             <h2>Sort By</h2>
             <div className="items">

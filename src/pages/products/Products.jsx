@@ -29,6 +29,7 @@ const Products = () => {
   const filteredData = useSelector(state => state.product.filteredProducts);
   const filterConditon = useSelector(state => state.product.isFilter);
   const uniqueBrandsName = [...new Set(productsData.map(item => item.brand))];
+  
 
   const handleShowFilter = () => {setShowFilter(!showFilter);};
 
@@ -39,7 +40,7 @@ const Products = () => {
   if(filterConditon) 
     data = filteredData;
   else  
-    data = productsData;
+    data = productsData;  
 
   useEffect(() => {
     if(cateoryId)

@@ -10,7 +10,8 @@ const Card = ({item}) => {
 
   return (
     <Link  to ={`/product/${item.subCategory}/${item.id}`} target="_blank" className='link'
-    onClick={() => dispatch(setParticularOne({id:item.id}))}>
+      onClick={() => dispatch(setParticularOne({id:item.id}))}
+    >
     <div className='card_container'>
       <div className="image_container">
         {item.isNew && <span>New season</span>}

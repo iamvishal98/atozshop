@@ -1,4 +1,6 @@
+//import { async } from "@firebase/util";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 export const ProductSlice =  createSlice({
     name:'product',
@@ -9,29 +11,23 @@ export const ProductSlice =  createSlice({
         filteredProducts : [],
         isFilter:false,
         isSearch:false,
-        isAuth:false
     },
     reducers:{
-
-        setProducts: (state,action) => {
-            state.products=action.payload;
-        },
 
         setParticular: (state,action) => {
 
             state.currentProducts =  
             state.products.flat().filter((item) => item.subCategory === action.payload.subCategory);
             state.isFilter=false;
+            state.filteredProducts = state.currentProducts;
         },
 
         setParticularOne : (state,action) => {
             state.currentProduct = state.products.filter((item) => item.id === action.payload.id);
-            //console.log('particularone',action.payload.id)
         },
 
         setFilter : (state,action) => {
-            if (!state.isFilter) state.filteredProducts = state.currentProducts;
-
+            //if (!state.isFilter) state.filteredProducts = state.currentProducts;
             switch(action.payload.type) {
                 
                 case 'asc' : 
@@ -54,10 +50,10 @@ export const ProductSlice =  createSlice({
                             break;
 
                         }
-                        else {
-                            state.isFilter=false;
-                            break;
-                        }
+                else {
+                        state.isFilter=false;
+                        break;
+                    }
 
                 default : state.isFilter=false;
             }
@@ -69,7 +65,9 @@ export const ProductSlice =  createSlice({
                              item.subCategory.toLowerCase().includes(action.payload.toLowerCase()) ||
                              item.category.toLowerCase().includes(action.payload.toLowerCase()));
            state.isFilter=false;
+           state.filteredProducts = state.currentProducts;
         },
+
 
     },
 
@@ -83,11 +81,11 @@ export const ProductSlice =  createSlice({
 
 });
 
-export const {setParticular,setParticularOne,setFilter,setSearch,setProducts} = ProductSlice.actions;
+export const {setParticular,setParticularOne,setFilter,setSearch} = ProductSlice.actions;
 
 export default ProductSlice.reducer;
 
-// cannot use as this a mock api , while delpoying it's not working
+//  mock api 
 
 export const fetchProducts= createAsyncThunk('products/fetch',async() => {
     const res = await fetch('https://run.mocky.io/v3/3636c3f6-4b0d-40df-a94c-3521facb9713');
