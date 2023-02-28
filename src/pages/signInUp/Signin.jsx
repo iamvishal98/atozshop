@@ -8,8 +8,8 @@ import './signinup.scss';
 import logo from '../../assets/logo.png'
 
 const Signin = () => {
-    const [email,setEmail] = useState('');
-    const [password,setPassword] = useState('');
+    const [email,setEmail] = useState('email@email.com');
+    const [password,setPassword] = useState('Pass@123');
     const dispatch = useDispatch();
     const isUserLoggedIn = useSelector(state => state.authentication.isAuth);
     const Navigate = useNavigate();
@@ -39,7 +39,7 @@ const Signin = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <label>Password</label>
-            <input type='text' 
+            <input type='password' 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
