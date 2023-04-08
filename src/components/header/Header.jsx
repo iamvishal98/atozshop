@@ -5,6 +5,8 @@ import {useDispatch, useSelector } from 'react-redux';
 
 import {HiOutlineShoppingCart} from 'react-icons/hi';
 import {FaSignInAlt,FaSignOutAlt,FaSearch} from 'react-icons/fa';
+import {VscAccount} from 'react-icons/vsc'
+import {AiOutlineHeart} from 'react-icons/ai'
 
 import './header.scss';
 import Logo from '../../assets/logo.png'
@@ -71,11 +73,29 @@ const Header = () => {
             <div className='search_icon' ref={exception} onClick={handleShowSearch}>
               <FaSearch className='icon' />
             </div>
-            {isUserLoggedIn ?
-              <FaSignOutAlt className='icon' onClick={handleLogout} style={{color:'green'}}/>
-              :
-              <FaSignInAlt className='icon' onClick={handleLogin} style={{color:'red'}}/> 
-            }
+            <div className="account_icon">
+              <VscAccount className='icon'/>
+              <div className="account_options">
+                <div className="account_subOptions">
+                  <p onClick={() => {isUserLoggedIn ? handleLogout() : handleLogin()}}>  
+                    {isUserLoggedIn ? <span>LOGOUT</span> : <span>LOGIN</span>}
+                    {isUserLoggedIn ?
+                      <FaSignOutAlt className='icon' style={{color:'red'}}/>
+                        :
+                      <FaSignInAlt className='icon' style={{color:'green'}}/> 
+                    }
+                  </p>
+                  <p>
+                    <span>WISHLIST</span>
+                    <AiOutlineHeart className='icon' style={{color:'red'}}/>
+                  </p>
+                  <p onClick={handleCartClick}>
+                    <span>CART</span>
+                    <HiOutlineShoppingCart className='icon' />
+                  </p>
+                </div>
+              </div>
+            </div>
             <HiOutlineShoppingCart className='icon' onClick={handleCartClick}/>
             <span className='bubble'>{cartNumber}</span>
           </div>
