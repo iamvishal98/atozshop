@@ -1,6 +1,8 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import {notify_success,notify_warning} from '../../utils/notifications'
+import { setDoc,doc } from "firebase/firestore";
+import { db } from "../../firebase/firebase";
+import {notify_success,notify_warning} from '../../utils/notifications';
 
 
 export const AuthSlice = createSlice({
@@ -31,8 +33,14 @@ export const AuthSlice = createSlice({
         })
         .addCase(signUp.fulfilled,(state,action) => {
                 state.authUser=action.payload;
-                state.isAuth=true;    
+                state.isAuth=true;
+                setDoc(doc(db,'users',state.authUser.user.email),{
+                    wishlistItem:[]
+                });    
                 notify_success(`Welcome ${state.authUser?.user?.email.split('@')[0]}`);            
+        })
+        .addCase(signUp.rejected,(state,action) => {
+            console.log(action.error.message);
         })
     }
 

@@ -6,12 +6,16 @@ import { auth } from '../../firebase/firebase';
 import { signIn } from '../../redux/slicers/AuthSlice';
 import './signinup.scss';
 import logo from '../../assets/logo.png'
+import {doc,onSnapshot } from 'firebase/firestore';
+import { db } from '../../firebase/firebase';
+import { add_to_wishlist } from '../../redux/slicers/WishlistSlice';
 
 const Signin = () => {
     const [email,setEmail] = useState('email@email.com');
     const [password,setPassword] = useState('Pass@123');
     const dispatch = useDispatch();
     const isUserLoggedIn = useSelector(state => state.authentication.isAuth);
+    const loggedinUser = useSelector(state=>state.authentication.authUser);
     const Navigate = useNavigate();
   
     const handleSubmit =(event) => {
@@ -21,9 +25,15 @@ const Signin = () => {
 
     useEffect(()=> {
         if(isUserLoggedIn)
+           {
             Navigate('/');
+            onSnapshot(doc(db,'users',`${loggedinUser?.user?.email}`),(doc) => {
+              dispatch(add_to_wishlist(doc.data()?.wishlistItem));
+          })
+            
+           }
 
-    },[isUserLoggedIn])
+    },[isUserLoggedIn,loggedinUser?.user?.email])
   
   
     return (

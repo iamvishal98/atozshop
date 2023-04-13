@@ -15,6 +15,8 @@ import clickOutside from '../../utils/helper/clickOutside';
 
 import { auth } from '../../firebase/firebase';
 import { logOut } from '../../redux/slicers/AuthSlice';
+import { notify_warning } from '../../utils/notifications';
+import { reset_wishlist } from '../../redux/slicers/WishlistSlice';
 
 
 const Header = () => {
@@ -51,6 +53,14 @@ const Header = () => {
 
   const handleLogout = () => {
     dispatch(logOut({auth}));
+    dispatch(reset_wishlist([]));
+  }
+
+  const handleWishlistClick = () => {
+    if(isUserLoggedIn)
+      Navigate('/wishlist');
+    else
+      notify_warning('Please login to access');
   }
 
 
@@ -85,7 +95,7 @@ const Header = () => {
                       <FaSignInAlt className='icon' style={{color:'green'}}/> 
                     }
                   </p>
-                  <p>
+                  <p onClick={handleWishlistClick}>
                     <span>WISHLIST</span>
                     <AiOutlineHeart className='icon' style={{color:'red'}}/>
                   </p>

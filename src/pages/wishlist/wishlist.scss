@@ -1,0 +1,61 @@
+.wishlist_container {
+    min-height: 79vh;
+    display: flex;
+    justify-content: center;
+    .wrapper {
+        padding: 1rem 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+
+        .wishlistItems {
+            display: flex;
+            flex-direction: column;
+
+            button {
+                margin-top: 10px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:'1100px') {
+    .wishlist_container {
+        .wrapper {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:'800px') {
+    .wishlist_container {
+        .wrapper {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width:'700px') {
+    .wishlist_container {
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+
+        }
+    }
+}
+
+@media screen and (max-width:'600px') {
+    .wishlist_container {
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+
+        }
+    }
+}
