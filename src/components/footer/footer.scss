@@ -1,119 +1,136 @@
 @import '../../style/globalStyles.scss';
-
 .wrapper_footer {
-    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
     background-color: #f8f8f8;
-
+    padding: 30px 100px;
+    h2 {
+        color: #424553;
+        font-size: 25px;
+        
+    }
+    p {
+        color: #7e818c;
+        font-size: 15px;
+        line-height: 25px;
+    }
     .top {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+        display: flex;    
+        align-items: center;
+        justify-content: center;
 
-        .left {
-            padding: 1rem;
+        .about {
+           h2 {
+            margin-bottom: 5px;
+           }
+
+        }
+    }
+
+    .mid {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        
+
+        .contact {
+            .contacts_icons {
+                display: flex;
+                gap: 5px;
+                font-size: 30px;
+            }
+           
+            font-size: 30px;
+        }
+        .mobile_apps {
             display: flex;
-
-            .logo {
-                width: 250px;
-                height: 100px;
+            gap: 10px;
+            .app_store,.play_store {
+                width: 130px;
+                height: 50px;
+                aspect-ratio: 10/3;
 
                 img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
                 }
             }
-
-            .categories {
-                margin: 0 5rem;
+        }
+        .promises {
+            .original_products,.buyback {
+                display: flex;
+                align-items: center;
+                gap:10px;
+                .promises_image {
+                    width: 50px;
+                    height: 50px;
+    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+    
             }
 
-            p {
-                margin: 0.5rem 0;
+            .bold-text {
+                font-weight: bold;
+                color: black;
             }
         }
-
-        .right {
-            padding: 1rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            text-align: justify;
-
-            p {
-                margin: 0.5rem 0;
-            }
-        }
-
     }
 
     .down {
         display: flex;
-        justify-content: center;
         align-items: center;
-        gap: 5px;
+        justify-content: center;
+        gap: 20px;
         .payment_icon{
-            font-size: 30px;
+            font-size: 50px;
         }
     }
 
 }
 
-
-@media screen and (max-width:$m-size) {
+@media screen and (max-width:900px) {
     .wrapper_footer {
-        padding: 1rem;
-        display: flex;
+    .mid {
         flex-direction: column;
-        .top {
+        gap:30px;
+
+        .categories,.contact {
             display: flex;
-            flex-direction: column;
-            .left {
-                
-                align-items: center;
-                justify-content: center;
-            }
-
-            .right {
-                grid-template-columns: 1fr;
-            }
+            align-items: center;
+            gap:30px
         }
+    }
+    .down {
+        justify-content: flex-start;
+    }
     }
     
 }
 
-@media screen and (max-width:600px) {
+ @media screen and (max-width:600px) { 
     .wrapper_footer {
-        font-size: 0.8rem;
-    
-        .top {
-            .left {
-                flex-direction: column;
-                .logo {
-                    width: 220px;
-                    height: 120px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: scale-down;
-                    }
+        padding: 20px 40px;
+        .mid {
+            .mobile_apps {
+                .app_store,.play_store {
+                    width: 100px;
+                    height: 50px;
                 }
-                .categories {
+            }
+
+            .promises {
+                .original_products,.buyback {
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
+                    flex-direction: column;
                     align-items: center;
-
-                    h2 {
-                        margin: 0 1rem;
+                    gap:10px;
                     }
-
-                    p {
-                        margin: 0 0.3rem;
-                    }
-                }
             }
         }
     }
-    
-}
+ }
